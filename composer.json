@@ -1,0 +1,35 @@
+{
+  "name": "opxcore/app-interface",
+  "description": "The OpxCore application interface.",
+  "homepage": "https://opxcore.com",
+  "type": "library",
+  "keywords": [
+    "opxcore",
+    "app",
+    "interface"
+  ],
+  "license": "MIT",
+  "support": {
+    "source": "https://github.com/opxcore/app-interface",
+    "issues": "https://github.com/opxcore/app-interface/issues"
+  },
+  "authors": [
+    {
+      "name": "Lozovoy Vyacheslav",
+      "email": "opxcore@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "opxcore/config-interface": "^1.0.1",
+    "opxcore/container-interface": "^1.0.5",
+    "psr/log": "^1.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "OpxCore\\App\\Interfaces\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
