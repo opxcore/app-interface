@@ -53,7 +53,9 @@ interface AppInterface
     /**
      * Get application output mode is to be used.
      *
+     * @param int|null $mode Mode to be set.
+     *
      * @return  int
      */
-    public function getOutputMode(): int;
+    public function outputMode(?int $mode): int;
 }
