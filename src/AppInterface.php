@@ -16,6 +16,10 @@ use Psr\Log\LoggerInterface;
 
 interface AppInterface
 {
+    public const APP_OUTPUT_HTTP = 0;
+    public const APP_OUTPUT_CONSOLE = 1;
+    public const APP_OUTPUT_JSON = 2;
+
     /**
      * Get container registered in application.
      *
@@ -45,4 +49,11 @@ interface AppInterface
      * @return  LoggerInterface
      */
     public function logger(): LoggerInterface;
+
+    /**
+     * Get application output mode is to be used.
+     *
+     * @return  int
+     */
+    public function getOutputMode(): int;
 }
