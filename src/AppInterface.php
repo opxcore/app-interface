@@ -19,9 +19,9 @@ interface AppInterface
     /**
      * Get container registered in application.
      *
-     * @return  ContainerInterface|null
+     * @return  ContainerInterface
      */
-    public function container(): ?ContainerInterface;
+    public function container(): ContainerInterface;
 
     /**
      * Get absolute path related to project root.
