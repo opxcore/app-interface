@@ -57,5 +57,5 @@ interface AppInterface
      *
      * @return  int
      */
-    public function outputMode(?int $mode): int;
+    public function outputMode(?int $mode = null): int;
 }
