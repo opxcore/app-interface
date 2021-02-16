@@ -19,6 +19,8 @@ interface AppInterface
     public const APP_OUTPUT_HTTP = 0;
     public const APP_OUTPUT_CONSOLE = 1;
     public const APP_OUTPUT_JSON = 2;
+    public const APP_OUTPUT_XML = 3;
+    public const APP_OUTPUT_SOAP = 4;
 
     /**
      * Get container registered in application.
