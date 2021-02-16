@@ -60,4 +60,11 @@ interface AppInterface
      * @return  int
      */
     public function outputMode(?int $mode = null): int;
+
+    /**
+     * Weaver the application is in debug mode.
+     *
+     * @return  bool
+     */
+    public function isDebugMode(): bool;
 }
