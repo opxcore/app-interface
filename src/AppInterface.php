@@ -12,10 +12,13 @@ namespace OpxCore\App\Interfaces;
 
 use OpxCore\Config\Interfaces\ConfigInterface;
 use OpxCore\Container\Interfaces\ContainerInterface;
-use Psr\Log\LoggerInterface;
+use OpxCore\Log\Interfaces\LogManagerInterface;
 
 interface AppInterface
 {
+    /**
+     * Output modes to inform subcomponents which output mode to use.
+     */
     public const APP_OUTPUT_HTTP = 0;
     public const APP_OUTPUT_CONSOLE = 1;
     public const APP_OUTPUT_JSON = 2;
@@ -48,9 +51,9 @@ interface AppInterface
     /**
      * Get logger.
      *
-     * @return  LoggerInterface
+     * @return  LogManagerInterface
      */
-    public function logger(): LoggerInterface;
+    public function log(): LogManagerInterface;
 
     /**
      * Get application output mode is to be used.

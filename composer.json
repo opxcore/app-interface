@@ -23,7 +23,7 @@
     "php": "^7.4",
     "opxcore/config-interface": "^1.0.1",
     "opxcore/container-interface": "^1.0.5",
-    "psr/log": "^1.0.2"
+    "opxcore/log-manager-interface": "^1.0.0"
   },
   "autoload": {
     "psr-4": {
