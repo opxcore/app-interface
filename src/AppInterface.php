@@ -11,8 +11,11 @@
 namespace OpxCore\App\Interfaces;
 
 use OpxCore\Config\Interfaces\ConfigInterface;
+use OpxCore\Container\Interfaces\ContainerExceptionInterface;
 use OpxCore\Container\Interfaces\ContainerInterface;
+use OpxCore\Container\Interfaces\NotFoundExceptionInterface;
 use OpxCore\Log\Interfaces\LogManagerInterface;
+use OpxCore\Profiler\Interfaces\ProfilerInterface;
 
 interface AppInterface
 {
@@ -54,6 +57,36 @@ interface AppInterface
      * @return  LogManagerInterface
      */
     public function log(): LogManagerInterface;
+
+    /**
+     * Get profiler proxy with assigned profiler (or not assigned).
+     *
+     * @return  ProfilerInterface
+     */
+    public function profiler(): ProfilerInterface;
+
+    /**
+     * Initialize application dependencies.
+     *
+     * @return  void
+     *
+     * @throws  ContainerExceptionInterface
+     * @throws  NotFoundExceptionInterface
+     */
+    public function init(): void;
+
+    /**
+     * Bootstrap application.
+     * If null passed to $bootstrappers no bootstrapper would be processed.
+     * Default `bootstrappers` or other string value would be used as key
+     * to get bootstrappers list  from application config.
+     * If array passed, it will be used as array of bootstrappers.
+     *
+     * @param string|array|null $bootstrappers
+     *
+     * @return  void
+     */
+    public function bootstrap($bootstrappers = 'bootstrappers'): void;
 
     /**
      * Get application output mode is to be used.
